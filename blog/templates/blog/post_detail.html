@@ -40,6 +40,9 @@
                    {% include './icons/hand-thumbs-up.svg' %}
                 </a>
             {% endif %}
+            <a href="{% url 'edit_comment' comment.id %}">
+                {% include './icons/pencil-square.svg' %}<!-- Assuming you have Font Awesome included -->
+            </a>
         </div>
         <strong>{{ comment.author }}</strong>
         <p>{{ comment.text|linebreaks }}</p>
